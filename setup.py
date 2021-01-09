@@ -8,7 +8,7 @@ setup(
   author = 'Behnam Vakili',                   # Type in your name
   author_email = 'behnamkvl@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/behnamkvl/SanDateTime',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/behnamkvl/SanDateTime/archive/v_03.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/behnamkvl/SanDateTime/archive/v_04.tar.gz',    # I explain this later on
   keywords = ['JalaliDateTime', 'Persian', 'datetime'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'persiantools',
