@@ -1,5 +1,5 @@
 from datetime import timedelta
-from persiantools.jdatetime import JalaliDateTime
+from persiantools.jdatetime import JalaliDateTime, JalaliDate
 import pytz
 import time
 
@@ -13,6 +13,8 @@ now = JalaliDateTime.now(tz=get_tehran_tzinfo_by_epoch(get_current_epoch()))
 jalali_to_gregorian = lambda j: j.to_gregorian().date() # needed when using plotly
 
 epoch_to_jalali = lambda e: JalaliDateTime.fromtimestamp(e/1000, tz=get_tehran_tzinfo_by_epoch(e)) 
+
+gregorian_to_jalali = JalaliDate.to_jalali
 
 def jalali_to_epoch(year, month, day=1, hour=0, minute=0, second=0, milliseconds=0):
     tehran_tzinfo = get_tehran_tzinfo_by_epoch(int(JalaliDateTime(year, month, day, hour, minute, second, milliseconds*1000).timestamp() * 1000))
