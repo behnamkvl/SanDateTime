@@ -14,7 +14,8 @@ jalali_to_gregorian = lambda j: j.to_gregorian().date() # needed when using plot
 
 epoch_to_jalali = lambda e: JalaliDateTime.fromtimestamp(e/1000, tz=get_tehran_tzinfo_by_epoch(e)) 
 
-gregorian_to_jalali = JalaliDate.to_jalali
+def utc_date_to_jalali(year, month, day):
+    return JalaliDate.to_jalali(year, month, day)
 
 def jalali_to_epoch(year, month, day=1, hour=0, minute=0, second=0, milliseconds=0):
     tehran_tzinfo = get_tehran_tzinfo_by_epoch(int(JalaliDateTime(year, month, day, hour, minute, second, milliseconds*1000).timestamp() * 1000))
