@@ -62,3 +62,8 @@ def get_last_wednsday_jalali_epoch():
     return e
 
 # ---------------------------------------------------------
+def gregorian_date_to_jalali_epoch(datetime_date):
+    j_date = utc_date_to_jalali(datetime_date.year, datetime_date.month, datetime_date.day)
+    return jalali_to_epoch(j_date.year, j_date.month, j_date.day)
+
+# ---------------------------------------------------------
