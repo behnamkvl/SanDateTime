@@ -32,6 +32,11 @@ sandatetime.epoch_to_jalali(1638649800000)
 >> JalaliDateTime(1400, 9, 14, 0, 0, tzinfo=<DstTzInfo 'Asia/Tehran' +0330+3:30:00 STD>)
 ```
 
+```python
+# returns corresponding standard python datetime object for a Jalali Datetime
+sandatetime.jalali_to_gregorian(sandatetime.epoch_to_jalali(1638649800000))
+>> datetime.date(2021, 12, 5)
+```
 
 
 ## License
